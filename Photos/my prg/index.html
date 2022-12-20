@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>My WebPage</title>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+	function showLogin()
+	{
+	alert("Show Login Window")
+	loginModal=document.getElementById("loginmodal")
+	loginModal.style.display="block";
+	registerModal=document.getElementById("registermodal")
+	registerModal.style.display="none";
+	}
+	function showRegister()
+	{
+	alert("Show Register Window")
+	registerModal=document.getElementById("registermodal")
+	registerModal.style.display="block";
+	loginModal=document.getElementById("loginmodal")
+	loginModal.style.display="none";
+	
+	}
+	</script>
+
+	</head>
+	<body>
+		<div id="loginmodal">
+		<form action='loginvalidate.py' method='post' name='lform'>
+		<center>Login</center>
+		<table id="logintable">
+		<tr><th>SignIn  with Ur Account</th></tr>
+		<tr><td><input type="text" name="uname" placeholder="Enter UserName" required></td></tr>
+		<tr><td><input type="password" name="upwd" placeholder="Enter Password" required></td></tr>
+		<tr><td><input type="submit" name="lbutton" value="Login"></td></tr>
+		</table>
+		</form>
+		</div>
+		
+		<div id="registermodal">
+		<form action='userregister.py' method='post' name='rform'>
+		<center>If New User Register Here</center>
+		<table id="logintable">
+		
+		<tr><td><input type="text" name="uname" placeholder="Enter UserName" required></td></tr>
+		<tr><td><input type="password" name="upwd" placeholder="Enter Password" required></td></tr>
+		<tr><td><input type="email" name="uemail" placeholder="Enter Email" required></td></tr>
+		<tr><td><input type="number" name="unumber" placeholder="Enter Mobile Number" required></td></tr>
+		<tr><td><input type="submit" name="lbutton" value="Register"></td></tr>
+		</table>
+		</form>
+		
+		</div>
+		<div id='container'>
+			<button onClick="topFunction()" id="myBtn" title="Go to top">Top</button>
+			<div id='loginheader'>
+			<table id="logininheader" border=0>
+			<tr><th><a href='#loginmodal' id='' onClick='showLogin()'><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp;SIGNIN</a></th><th><a href='#registermodal' id='' onClick='showRegister()'><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;&nbsp;SIGNUP</a></th>
+</tr>
+			</table>
+			</div>
+			<div id='header'>
+			<table id="inheader" border=0>
+			<tr><th><a href='#home'><i class="fa fa-home" aria-hidden="true"></i>
+HOME</a></th><th><a href='#aboutus'><i class="fa fa-paper-plane" aria-hidden="true"></i>ABOUT US</a></th>
+			<th><a href='#services'><i class="fa fa-life-ring" aria-hidden="true"></i>
+SERVICES</a></th><th><a href='#gallery'><i class="fa fa-picture-o" aria-hidden="true"></i>
+GALLERY</a></th><th>
+			<a href='#contact'><i class="fa fa-phone-square" aria-hidden="true"></i>
+CONTACT</a></th></tr>
+			</table>
+			</div>
+			<div id="bodycontent">
+			<div id=aboutus>
+			<div id='aleft'><center><img src='img/a.jpg'></center></div>
+			<div id='aright'>
+			<center>
+			
+			<p>
+			<b>About Us</b><br><br>
+			Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network).[1] Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. A more comprehensive list of tasks to which Web development commonly refers, may include Web engineering, Web design, Web content development, client liaison, client-side/server-side scripting, Web server and network security configuration, and e-commerce development.
+			
+			<br>
+			Among Web professionals, "Web development" usually refers to the main non-design aspects of building Web sites: writing markup and coding.[2] Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills.
+			
+			
+			</p>
+			</center>
+			
+			
+			
+			
+			</div>
+			</div>
+			
+			<div id=services>
+			<div id='sleft'>
+			<center>
+			<p>
+			<b>Services</b><br><br>
+			Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network).[1] Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. A more comprehensive list of tasks to which Web development commonly refers, may include Web engineering, Web design, Web content development, client liaison, client-side/server-side scripting, Web server and network security configuration, and e-commerce development.
+			
+			<br>
+			Among Web professionals, "Web development" usually refers to the main non-design aspects of building Web sites: writing markup and coding.[2] Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills.
+			
+			<br>
+			Among Web professionals, "Web development" usually refers to the main non-design aspects of building Web sites: writing markup and coding.[2] Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills.
+			
+			</p>
+			</center>
+			
+			
+			
+			
+			
+			</div>
+			<div id='sright'><center><img src='img/a.jpg'></center>
+			
+			
+			</div>
+			</div>
+			<br><br>
+			<div id=gallery>
+			<h1>Gallery</h1><hr>
+			<div id='galimage'>
+			<a href='img/a.jpg' target="_blank"><img src='img/a.jpg'></a>
+			<div id='galdesc'>
+			Image 1
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 2
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 3
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 4
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 5
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 6
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 7
+			</div>
+			</div>
+			
+			<div id='galimage'>
+			<img src='img/a.jpg'>
+			<div id='galdesc'>
+			Image 8
+			</div>
+			</div>
+			</div>
+					
+			<div id=contact>
+			<h1>Contact Us</h1><hr>
+			
+			
+			<div id='cleft'>
+			<section>
+			
+			Enquire <pre>
+		<form action="sendenquiry.py" name="enquiry" method="post">	
+		<input type="text" name="username" placeholder="Enter Your Name" required>
+		
+		<input type="email" name="useremail" placeholder="Enter Your EmailId" required>
+		
+		<input type="number" name="usermobile" placeholder="Enter Your Mobile Number" required>
+		
+		<textarea rows=10 cols=50 name="usermsg" placeholder="Enter Your Comments" required></textarea>
+		
+		<input type="submit" name="sbutton" value="Send">
+			</form>
+			</section>
+			</div>
+			<div id='cright'>
+			<section>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.87242756309!2d76.93090571428891!3d11.04819025714083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858a4a5bfa5e5%3A0x5f35cc45fba86695!2sTVS%20Nagar%20-%20Koundampalayam%20Rd%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1618928129134!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			
+			
+			</section>
+			</div>
+			</div>
+			
+			</div>
+			<div id="footer">
+			<table id="infooter" border=0>
+			<tr><th>&copy;Reserved to DivyaBharathi</th></tr>
+			</table>
+			</div>
+		  </div>
+		  <script>
+		  var mybutton=document.getElementById("myBtn");
+		  window.onscroll=function(){scrollFunction()};
+		  function scrollFunction(){
+		  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+		  mybutton.style.display="block";}
+		  else{
+		  mybutton.style.display="none";
+		  }
+		  }
+		  function topFunction(){
+		  document.body.scrollTop=0;
+		  document.documentElement.scrollTop=0;
+		  }
+		  </script>
+	
+	</body>
+</html>

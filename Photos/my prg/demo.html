@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Voucher</title>
+	<link rel='stylesheet' type='text/css' href='css/vou.css'>
+	</head>
+	<body>
+	<form action='viewvoucher.py' method='post' name='vform'>
+	<div id="vright">
+        <h2 >CASH VOUCHER</h2>
+		<table id="voucher">
+		<tr><td>No:</td><td><input type="number" name="No" required></td><td>Date:</td><td><input type="date" name="Date" required></td></tr>
+</table>
+</div>
+<div id="vleft">
+<table><br><br><br><br><br><br><br><br><br>
+       <tr><td align=right>Pay To:</td><td><input type="text" name="upay" placeholder="Enter Name" required></td></tr>
+		<tr><td align=right>Rs in Words:</td><td><input type="text" name="rs" placeholder="Rupees in Words" required></td></tr>
+		<tr><td align=right>Being:</td><td><input type="text" name="being" placeholder="Being" required></td></tr>
+		<tr><td align=right>And Debit:</td><td><input type="text" name="udebit" placeholder="Enter Debit" required></td></tr>
+</table>
+</div>
+
+<div id="vright">
+<table><br><br>
+<tr><td>Recd.above of RS:</td><td><input type="number" name="rs" id="rs" placeholder="Rupees" required></td></tr>
+</table>
+</div>
+
+<div id="vleft">
+<table><br><br><br>
+       <tr><td align=right>Authorised By:</td><td><input type="text" name="authorised" placeholder="Enter Name" required></td></tr>
+		<tr><td align=right>Paid cash/<br>Cheque drawn on:</td><td><input type="text" name="paid" placeholder="Enter Here" required></td></tr>
+</table>
+</div>
+<div id="rright">
+        <h3>Receiver's Signature</h3>
+</div>
+</body>
+</html>

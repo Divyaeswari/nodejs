@@ -1,0 +1,14 @@
+How Web Works
+User/Client
+(Browaer)
+First user do some works in a web page,For Example type a domain name in browser and visit that web page, or fill the form and submit in that web page,
+First, when we entered the domain address in browser, the browser send the request, that request directly sent to the Domain Name Servers, this is same like our PC, its take the our entered domain address and given to the another one address, that address is our domain address server name. Domain Name Servers gives the server name of our domain name that is IP Address, then Again DNS send the request, or we can enter the server address directly in the browser, this request sent directly. This request is sent to server. Server is also like a our PC, its do some works in some palces.server having some programs to send the response against our request, For example we send the requset in Node JS, Server having some nodeJS program to send the response.
+Server gives the response as may be HTML or JSON or XML
+screen shot for diagram
+
+we are trying to do the server response using Node JS
+web means send and recive the datas from server and client
+HTTP,HTTPS Protocol://send the datas into browser to server
+HTTP-Hyper Text Transfer Protocol-Protocol means rules
+HTTPS-Hyper Text Transfer Protocol Secure//send the data securely
+This a language its created for understanding the one PC language to another PC

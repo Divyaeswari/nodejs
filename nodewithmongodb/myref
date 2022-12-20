@@ -1,0 +1,3 @@
+db.employees.insert({"_id":"3","fname":"tae","lname":"tae","email":"tae@gmail.com","salary":"55500","skills":["Sales","Marketing"],"department":{"name":"Marketing"}})
+
+db.employees.findOne({email:"jin@gmail.com"},{fname:1,lname:1})

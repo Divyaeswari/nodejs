@@ -1,0 +1,89 @@
+Microsoft Windows [Version 10.0.19044.2251]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importcsv --type csv --file student.csv --fields _id,fname,lname,phno
+2022-12-10T12:29:23.795+0530    connected to: mongodb://localhost/
+2022-12-10T12:29:23.806+0530    2 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --out=data/details.csv
+2022-12-10T12:43:05.294+0530    connected to: mongodb://localhost/
+2022-12-10T12:43:05.312+0530    exported 2 records
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --query='{"fname":"divya"}' --out=data/details1.csv
+2022-12-10T12:49:55.207+0530    query '[39 123 102 110 97 109 101 58 100 105 118 121 97 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T12:49:55.208+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --query='{"_id":1}' --out=data/details1.csv
+2022-12-10T12:51:35.676+0530    query '[39 123 95 105 100 58 49 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T12:51:35.676+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --query='{"_id":"1"}' --out=data/details1.csv
+2022-12-10T12:51:50.392+0530    query '[39 123 95 105 100 58 49 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T12:51:50.395+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=tbl_login --type=csv --fields=_id,name,pwd --query='{"pwd":"2345"}' --out=data/details1.csv
+2022-12-10T12:54:43.260+0530    query '[39 123 112 119 100 58 50 51 52 53 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T12:54:43.261+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --out=data/details.csv
+2022-12-10T12:56:16.727+0530    connected to: mongodb://localhost/
+2022-12-10T12:56:16.733+0530    exported 2 records
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --query='{"fname":"divya"}' --out=data/details1.csv
+2022-12-10T12:57:15.073+0530    query '[39 123 102 110 97 109 101 58 100 105 118 121 97 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T12:57:15.074+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fields=_id,fname,lname,phno --query='{"lname":"bharathi"}' --out=data/details1.csv
+2022-12-10T12:59:00.184+0530    query '[39 123 108 110 97 109 101 58 98 104 97 114 97 116 104 105 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T12:59:00.185+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importcsv --type=csv --fieldFile=data/details.txt --query='{"lname":"bharathi"}' --out=data/details1.csv
+2022-12-10T13:05:10.473+0530    query '[39 123 108 110 97 109 101 58 98 104 97 114 97 116 104 105 125 39]' is not valid JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
+2022-12-10T13:05:10.474+0530    try 'mongoexport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=tbl_login --out=data/example.json
+2022-12-10T13:23:37.992+0530    connected to: mongodb://localhost/
+2022-12-10T13:23:38.010+0530    exported 2 records
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importjson --example.json --jsonArray
+2022-12-10T13:28:40.020+0530    error parsing command line options: unknown option "example.json"
+2022-12-10T13:28:40.020+0530    try 'mongoimport --help' for more information
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importjson --file data/example.json --jsonArray
+2022-12-10T13:29:06.365+0530    connected to: mongodb://localhost/
+2022-12-10T13:29:06.369+0530    Failed: error reading separator after document #1: bad JSON array format - found no opening bracket '[' in input source
+2022-12-10T13:29:06.369+0530    0 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importjson --file data/example.json --jsonArray
+2022-12-10T13:30:28.585+0530    connected to: mongodb://localhost/
+2022-12-10T13:30:28.587+0530    Failed: error reading separator after document #1: bad JSON array format - found no opening bracket '[' in input source
+2022-12-10T13:30:28.588+0530    0 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importjson --file data/example.json --jsonArray
+2022-12-10T13:30:58.181+0530    connected to: mongodb://localhost/
+2022-12-10T13:30:58.192+0530    Failed: error reading separator after document #3: bad JSON array format - found ':' outside JSON object/array in input source
+2022-12-10T13:30:58.193+0530    0 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importjson --file data/example.json --jsonArray
+2022-12-10T13:32:03.207+0530    connected to: mongodb://localhost/
+2022-12-10T13:32:03.210+0530    Failed: error reading separator after document #2: bad JSON array format - found '{' outside JSON object/array in input source
+2022-12-10T13:32:03.211+0530    0 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection importjson --file data/example.json --jsonArray
+2022-12-10T13:32:47.312+0530    connected to: mongodb://localhost/
+2022-12-10T13:32:47.330+0530    2 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoexport --db=mongodatabasedb --collection=importjson --out=data/example1.json
+2022-12-10T13:36:09.871+0530    connected to: mongodb://localhost/
+2022-12-10T13:36:09.886+0530    exported 2 records
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection sampletbl --file data/example1.json --jsonArray
+2022-12-10T13:37:39.880+0530    connected to: mongodb://localhost/
+2022-12-10T13:37:39.883+0530    Failed: error reading separator after document #1: bad JSON array format - found no opening bracket '[' in input source
+2022-12-10T13:37:39.884+0530    0 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>mongoimport --db mongodatabasedb --collection sampletbl --file data/example1.json
+2022-12-10T13:38:03.424+0530    connected to: mongodb://localhost/
+2022-12-10T13:38:03.438+0530    2 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Program Files\MongoDB\Server\6.0\bin>

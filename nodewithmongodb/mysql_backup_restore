@@ -1,0 +1,19 @@
+Microsoft Windows [Version 10.0.19044.2251]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin>mysqldump.exe -e -uroot -p nodedb -h localhost > C:\nodedb.sql
+Access is denied.
+
+C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin>mysqldump.exe -e -uroot -p nodedb -h localhost > C:\nodedb.sql
+Access is denied.
+
+C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin>mysqldump.exe -e -uroot -p nodedb -h localhost > D:\nodedb.sql
+Enter password:
+
+C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin>mysqldump.exe -e -uroot -p nodedb -h localhost node_logintable> D:\nodetbl.sql
+Enter password:
+
+C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin>mysql -uroot -p  nodedb -h localhost < D:\nodedb.sql
+Enter password:
+
+C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin>
